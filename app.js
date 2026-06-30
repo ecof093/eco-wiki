@@ -1,39 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const searchButton = document.getElementById("searchButton");
-const searchBox = document.getElementById("searchBox");
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
 
-searchButton.addEventListener("click", () => {
+    searchButton.addEventListener("click", () => {
 
-const keyword = searchBox.value.trim();
+        const keyword = searchInput.value.trim();
 
-if(keyword === ""){
-alert("Please enter an article code.");
-return;
-}
+        if (keyword === "") {
+            alert("Please enter a search term.");
+            return;
+        }
 
-window.location.href = "article.html?search=" + encodeURIComponent(keyword);
+        window.location.href =
+            "article.html?search=" +
+            encodeURIComponent(keyword);
 
-});
+    });
 
-searchBox.addEventListener("keydown",(e)=>{
+    searchInput.addEventListener("keydown", (event) => {
 
-if(e.key==="Enter"){
-searchButton.click();
-}
+        if (event.key === "Enter") {
+            searchButton.click();
+        }
 
-});
-
-const langButtons=document.querySelectorAll(".language button");
-
-langButtons.forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-alert("Language system will be available in Stage 3.");
-
-});
-
-});
+    });
 
 });
