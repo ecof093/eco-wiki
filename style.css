@@ -162,3 +162,12 @@ footer p{
     margin-top:10px;
     color:#555;
     }
+#banner{
+    margin-top:40px;
+}
+
+#banner img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    }
