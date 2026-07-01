@@ -1,29 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
 
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", () => {
 
-    searchButton.addEventListener("click", () => {
+    const keyword = searchInput.value.trim();
 
-        const keyword = searchInput.value.trim();
+    if (keyword === "") {
+        alert("Please enter a search term.");
+        return;
+    }
 
-        if (keyword === "") {
-            alert("Please enter a search term.");
-            return;
-        }
+    alert("Searching for: " + keyword);
 
-        window.location.href =
-            "article.html?search=" +
-            encodeURIComponent(keyword);
+});
 
-    });
+searchInput.addEventListener("keydown", (event) => {
 
-    searchInput.addEventListener("keydown", (event) => {
-
-        if (event.key === "Enter") {
-            searchButton.click();
-        }
-
-    });
+    if (event.key === "Enter") {
+        searchButton.click();
+    }
 
 });
