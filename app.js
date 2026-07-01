@@ -46,7 +46,11 @@ searchInput.addEventListener("keydown", (event) => {
 
 });
 
-articles.forEach(article => {
+const randomArticles = [...articles]
+.sort(() => Math.random() - 0.5)
+.slice(0,4);
+
+randomArticles.forEach(article => {
 
     recommended.innerHTML += `
         <div class="card">
