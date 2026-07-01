@@ -141,3 +141,24 @@ footer p{
     }
 
     }
+.card{
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:18px;
+    margin-bottom:15px;
+    background:#fafafa;
+}
+
+.card h4{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.card b{
+    color:#1f7a3f;
+}
+
+.card p{
+    margin-top:10px;
+    color:#555;
+    }
